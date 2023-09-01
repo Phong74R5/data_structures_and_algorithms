@@ -1,0 +1,115 @@
+M = {3, 1, 7, 5, 6}
+- Bubble Sort(M, 5):
+    -for 1:
+    a. i = 0, kiểm tra i < n - 1 <=> 0 < 4 ==> true:
+        - for 2:
+        1. j = 0, kiểm tra j < n - i - 1 <=> 0 < 4 ==> true:
+            - if a[j] > a[j + 1] <=> a[0] > a[1] <=> 3 > 1 ==> true:
+            => hoán đổi a[0] và a[1] ==> M = {1, 3, 7, 5, 6}
+        2. j++ ==> j = 1, kiểm tra j < n - i - 1 <=> 1 < 4 ==> true:
+            - if a[j] > a[j + 1] <=> a[1] > a[2] <=> 3 > 7 ==> false
+        3. j++ ==> j = 2, kiểm tra j < n - i - 1 <=> 2 < 4 ==> true:
+            - if a[j] > a[j + 1] <=> a[2] > a[3] <=> 7 > 5 ==> true:
+            => hoán đổi a[2] và a[3] ==> M = {1, 3, 5, 7, 6}
+        4. j++ ==> j = 3, kiểm tra j < n - i - 1 <=> 3 < 4 ==> true:
+            - if a[j] > a[j + 1] <=> a[3] a[4] <=> 7 > 6 ==> true:
+            => hoán đổi a[3] và a[4] ==> M = {1, 3, 5, 6, 7}
+        5. j++ ==> j = 4, kiểm tra j < n - i - 1 <=> 4 < 4 ==> false
+    b. i++ ==> i = 1, kiểm tra i < n - 1 <=> 1 < 4 ==> true:
+        - for 2:
+        1. j = 0, kiểm tra j < n - i - 1 <=> 0 < 3 ==> true:
+            - if a[j] > a[j + 1] <=> a[0] > a[1] <=> 1 > 3 ==> false
+        2. j++ ==> j = 1, kiểm tra j < n - i - 1 <=> 1 < 3 ==> true:
+            - if a[j] > a[j + 1] <=> a[1] > a[2] <=> 3 > 5 ==> false
+        3. j++ ==> j = 2, kiểm tra j < n - i - 1 <=> 2 < 3 ==> true:
+            - if a[j] > a[j + 1] <=> a[2] > a[3] <=> 5 < 6 ==> false
+        4. j++ ==> j = 3, kiểm tra j < n - i - 1 <=> 3 < 3 ==> false
+    c. i++ ==> i = 2, kiểm tra i < n - 1 <=> 2 < 4 ==> true:
+        - for 2:
+        1. j = 0, kiểm tra j < n - i - 1 <=> 0 < 2 ==> true:
+            - if a[j] > a[j + 1] <=> a[0] > a[1] <=> 1 > 3 ==> false
+        2. j++ ==> j = 1, kiểm tra j < n - i - 1 <=> 1 < 2 ==> true:
+            - if a[j] > a[j + 1] <=> a[1] > a[2] <=> 3 > 5 ==> false
+        3. j++ ==> j = 2, kiểm tra j < n - i - 1 <=> 2 < 2 ==> false
+    d. i++ ==> i = 3, kiểm tra i < n - 1 <=> 3 < 4 ==> true:
+        - for 2:
+        1. j = 0, kiểm tra j < n - i - 1 <=> 0 < 1 ==> true:
+            - if a[j] > a[j + 1] <=> a[0] > a[1] <=> 1 > 3 ==> false
+        2. j++ ==> j = 1, kiểm tra j < n - i - 1 <=> 1 < 1 ==> false
+    e. i++ ==> i = 4, kiểm tra i < n - 1 <=> 4 < 4 ==> false
+==> kết thúc giải thuật Bubble Sort ==> M = {1, 3, 5, 6, 7}
+
+- Interchange Sort(M, 5)
+    - for 1:
+    1. i = 0, kiểm tra i < n <=> 0 < 5 ==> true:
+        - for 2:
+        1. j = i + 1 ==> j = 1, kiểm tra j < n <=> 1 < 5 ==> true:
+            - if a[i] > a[j] <=> a[0] > a[1] <=> 3 > 1 ==> true:
+            => hoán đổi a[0] và a[1] ==> M = {1, 3, 7, 5, 6}
+        2. j++ ==> j = 2, kiểm tra j < n <=> 2 < 5 ==> true:
+            - if a[i] > a[j] <=> a[0] > a[2] <=> 1 > 7 ==> false
+        3. j++ ==> j = 3, kiểm tra j < n <=> 3 < 5 ==> true:
+            - if a[i] > a[j] <=> a[0] > a[3] <=> 1 > 5 ==> false
+        4. j++ ==> j = 4, kiểm tra j < n <=> 4 < 5 ==> true:
+            - if a[i] > a[j] <=> a[0] > a[4] <=> 1 > 6 ==> false
+        5. j++ ==> j = 5, kiểm tra j < n <=> 5 < 5 ==> false
+    2. i++ ==> i = 1, kiểm tra i < n <=> 2 < 5 ==> true:
+        - for 2:
+        1. j = i + 1 ==> j = 2, kiểm tra j < n <=> 2 < 5 ==> true:
+            - if a[i] > a[j] <=> a[1] > a[2] <=> 3 > 7 ==> false
+        2. j++ ==> j = 3, kiểm tra j < n <=> 3 < 5 ==> true:
+            - if a[i] > a[j] <=> a[1] > a[3] <=> 3 > 5 ==> false
+        3. j++ ==> j = 4, kiểm tra j < n <=> 4 < 5 ==> true:
+            - if a[i] > a[j] <=> a[1] > a[4] <=> 3 > 6 ==> false
+        4. j++ ==> j = 5, kiểm tra j < n <=> 5 < 5 ==> false
+    3. i++ ==> i = 2, kiểm tra i < n <=> 3 < 5 ==> true:
+        - for 2:
+        1. j = i + 1 ==> j = 3, kiểm tra j < n <=> 3 < 5 ==> true:
+            - if a[i] > a[j] <=> a[2] > a[3] <=> 7 > 5 ==> true:
+            => hoán đổi a[2] và a[3] ==> M = {1, 3, 5, 7, 6}
+        2. j++ ==> j = 4, kiểm tra j < n <=> 4 < 5 ==> true:
+            - if a[i] > a[j] <=> a[2] > a[4] <=> 5 > 6 ==> false
+        3. j++ ==> j = 5, kiểm tra j < n <=> 5 < 5 ==> false
+    4. i++ ==> i = 3, kiểm tra i < n <=> 3 < 5 ==> true:
+        - for 2:
+        1. j = i + 1 ==> j = 4, kiểm tra j < n <=> 4 < 5 ==> true:
+            - if a[i] > a[j] <=> a[3] > a[4] <=> 7 > 6 ==> true:
+            => hoán đổi a[3] và a[4] ==> M = {1, 3, 5, 6, 7}
+        2. j++ ==> j = 5, kiểm tra j < n <=> 5 < 5 ==> false
+    5. i++ ==> i = 4, kiểm tra i < n <=> 4 < 5 ==> true:
+        - for 2:
+        1. j = i + 1 ==> j = 5, kiểm tra j < n <=> 5 < 5 ==> false
+    6. i++ ==> i = 5, kiểm tra i < n <=> 5 < 5 ==> false
+==> kết thúc giải thuật Interchange Sort ==> M = {1, 3, 5, 6, 7}
+- Insertion Sort(M, 5)
+1. pos = 0
+2. for 1:
+    1. i = 1, kiểm tra i < n <=> 1 < 5 ==> true:
+        1. x = a[i] = a[1] = 1
+        2. for 2:
+            1. pos = i = 1, kiểm tra pos > 0 && a[pos - 1] > x <=> 1 > 0 && a[0] = 3 > 1 ==> true:
+            - a[pos] = a[pos - 1] <=> a[1] = a[0] = 3 ==> M = {3, 3, 7, 5, 6}
+            2. pos-- ==> pos = 0, kiểm trs pos > 0 $$ a[pos - 1] > x <=> 0 > 0 && a[0] = 3 > 1 ==> false
+        3. a[pos] = x <=> a[0] = 1 ==> M = {1, 3, 7, 5, 6}
+    2. i++ ==> i = 2, kiểm tra i < n <=> 2 < 5 ==> true:
+        1. x = a[i] = a[2] = 7
+        2. for 2:
+            1. pos = i = 2, kiểm tra pos > 0 && a[pos - 1] > x <=> 2 > 0 && a[1] = 3 > 7 ==> false 
+        3. a[pos] = x <=> a[2] = 7 ==> M = {1, 3, 7, 5, 6}
+    3. i++ ==> i = 3, kiểm tra i < n <=> 3 < 5 ==> true:
+        1. x = a[i] = a[3] = 5
+        2. for 2:
+            1. pos = i = 3, kiểm tra pos > 0 && a[pos - 1] > x <=> 3 > 0 && a[2] = 7 > 5 ==> true:
+            - a[pos] = a[pos - 1] <=> a[3] = a[2] = 7 ==> M = {1,3, 7, 7, 6}
+            2, pos-- ==> pos = 2, kiểm tra pos > 0 && a[pos - 1] > x <=> 2 > 0 && a[1] = 3 > 5 ==> false
+        3. a[pos] = x <=> a[2] = 5 ==> M = {1, 3, 5, 7, 6}
+    4. i++ ==> i = 4, kiểm tra i < n <=> 4 < 5 ==> true:
+        1. x = a[i] = a[4] = 6
+        2. for 2:
+            1. pos = i = 4, kiểm tra pos > 0 && a[pos - 1] > x <=> 4 > 0 && a[3] = 7 > 6 ==> true:
+            - a[pos] = a[pos - 1] <=> a[4] = a[3] = 7 ==> M = {1, 3, 5, 7, 7}
+            2. pos-- ==> pos = 3, kiểm tra pos > 0 && a[pos - 1] > x <=> 3 > 0 && a[2] = 5 > 6 ==> false
+        3. a[pos] = x <=> a[3] = 6 ==> M = {1, 3, 5, 6, 7}
+    5. i++ ==> i = 5, kiểm tra i < n <=> 5 < 5 ==> false
+==> kết thúc giải thuật Insertion Sort ==> M = {1, 3, 5, 6, 7}
+
